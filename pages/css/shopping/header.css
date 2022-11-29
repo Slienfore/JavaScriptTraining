@@ -1,0 +1,80 @@
+/*头部区域*/
+header {
+    --header-height: 85px;
+    width: 100%;
+    height: var(--header-height);
+    max-height: var(--header-height);
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+header a {
+    display: inline-block;
+    color: var(--color-font);
+    line-height: var(--header-height);
+    font-size: 15.5px;
+    padding: 0 10px;
+    transition: color .29s ease-in-out;
+}
+
+header a:hover {
+    color: var(--color-orange-4);
+}
+
+/*左侧*/
+.header-left-wrap {
+    display: flex;
+    height: 100%;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.header-left-wrap > h3 {
+    font-weight: 400;
+    line-height: var(--header-height);
+    margin-right: 15px;
+}
+
+.version-wrap {
+    display: flex;
+    height: 100%;
+}
+
+/*小竖条*/
+.version-item::before {
+    content: "|";
+    color: var(--color-font);
+}
+
+.version-item > a {
+    height: 100%;
+    font-size: 15px;
+}
+
+/*右侧*/
+.header-right-wrap {
+}
+
+.header-right-wrap > ul {
+    display: flex;
+}
+
+/*小竖条*/
+.header-right-wrap > ul > li::after {
+    content: "|";
+    color: var(--color-font);
+}
+
+/*最后一个没有小竖条*/
+.header-right-wrap > ul > li:last-of-type::after {
+    content: "";
+}
+
+.header-right-wrap > ul > li:last-of-type a {
+    padding-right: 0;
+}

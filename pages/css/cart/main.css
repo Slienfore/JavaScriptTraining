@@ -1,0 +1,183 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapping {
+    margin-bottom: 100px;
+}
+
+/*表头*/
+.wrapping .main-top {
+    background: none;
+    font-size: 17px;
+    opacity: .9;
+    padding: 0;
+}
+
+.wrapping .main-top > div {
+    height: 50px;
+}
+
+/*分割线*/
+.divide {
+    width: 92%;
+    margin: 17px auto;
+    height: 1px;
+    background: var(--color-gray-3);
+}
+
+/*列*/
+.col-wrap {
+    border-radius: 15px;
+    background: var(--backdrop-3);
+    display: flex;
+    width: 100%;
+    color: var(--color-font);
+    font-weight: 550;
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+/*第二个开始*/
+.goods-list > div:nth-of-type(n + 2) {
+    margin: 17px 0;
+}
+
+.col-wrap a {
+    color: var(--color-font);
+}
+
+.col-wrap > div {
+    height: 90px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*商品名*/
+.col-wrap .col-name {
+    flex: 2;
+}
+
+.col-name .goods-version {
+    color: var(--color-red-3);
+}
+
+.col-name .goods-color {
+    color: var(--color-blue-5);
+}
+
+/*复选框*/
+.wrapping .col-check {
+    justify-content: left;
+}
+
+.check-label {
+    cursor: pointer;
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-check input {
+    width: 18px;
+    height: 18px;
+}
+
+/*全选*/
+.all-in {
+    margin-right: 15px;
+}
+
+/*照片*/
+.col-img img {
+    width: 90px;
+    height: 90px;
+}
+
+/*商品名*/
+.col-name > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-name span:nth-of-type(n + 2) {
+    margin: 3px 0;
+    font-size: 12px;
+}
+
+/*numBox*/
+.sli-num-box {
+    height: 32px;
+}
+
+.col-opt > i {
+    font-size: 20px;
+    opacity: .7;
+    padding: 10px;
+    cursor: pointer;
+    transform-origin: center;
+    transition: .36s linear;
+}
+
+.col-opt > i:hover {
+    opacity: 1;
+    transform: rotate(360deg) scale(1.15);
+}
+
+/*状态Bar*/
+.float-bar {
+    background: var(--backdrop-2);
+    height: 70px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 1px 10px 4px var(--color-gray-1);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*固定时候*/
+.float-bar-fixed {
+    /*相对于 body 进行定位*/
+    position: fixed;
+    width: 70%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 25px;
+}
+
+.float-bar > div {
+    display: flex;
+    align-items: center;
+}
+
+.bar-left,
+.choose-num,
+.total-price {
+    color: var(--color-font);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.bar-right {
+    display: flex;
+}
+
+.bar-right > div {
+    margin: 0 10px;
+}
+
+.bar-right .high-light {
+    color: var(--color-red-2);
+    font-size: 20px;
+    padding: 0 6px;
+}
+
+.pay-btn {
+    margin-right: 42px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>swiper</title>
+    <link rel="stylesheet" href="../static/css/slien.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="none-transition sli-position-center">
+    <!--sli-width 自定义宽度, sli-height 自定义高度 sli-radius 圆角大小-->
+    <div id="sli-swiper" sli-width="800px" sli-height="380px" sli-radius="40px">
+    </div>
+    <div id="sli-swiper1" sli-width="800px" sli-height="380px">
+    </div>
+</div>
+<script type="module">
+    import sli from "../slien.js"
+
+    $(function () {
+        // 初始化
+        sli()
+
+        //  $.swiper({ swipers }) 传入需要渲染的数据 swipers [{href: '', src: ''}]
+        $.swiper({
+            target: '#sli-swiper',
+            swipers,
+        })
+
+        $.swiper({
+            target: '#sli-swiper1',
+            swipers: swipers.reverse(),
+            delay: 0
+        })
+    })
+
+    // 照片数组
+    const swipers = [
+        {
+            src: 'https://pic.leetcode-cn.com/1663235278-nhRkFz-%E4%B8%80%E8%B5%B7%E6%9D%A5%E5%88%B7%E9%A2%98.jpg?x-oss-process=image%2Fformat%2Cwebp'
+        },
+        {
+            src: 'https://pic.leetcode-cn.com/1662606828-ocxHAv-%E9%A6%96%E9%A1%B5%E5%8F%B3%E8%BE%B9%E6%A0%8F.png?x-oss-process=image%2Fformat%2Cwebp'
+        },
+        {
+            src: 'https://pic.leetcode-cn.com/1662722780-FDQWdf-%E5%AD%A6%E4%B9%A0%E9%A6%96%E9%A1%B5.png?x-oss-process=image%2Fformat%2Cwebp'
+        }
+    ]
+</script>
+</body>
+</html>

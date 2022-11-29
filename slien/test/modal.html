@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modal</title>
+    <link rel="stylesheet" href="../static/css/slien.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<div class="none-transition sli-position-center">
+    <button class="sli-button sli-button-warn">触发事件</button>
+</div>
+<!--<div class="sli-modal">
+    &lt;!&ndash;自己居中, 内容居中&ndash;&gt;
+    <div class="sli-modal-overlay sli-position-center sli-flex-center">
+        <div class="sli-modal-wrap">
+            <i title="关闭" class="close-tag iconfont icon-warn"></i>
+            &lt;!&ndash;顶部&ndash;&gt;
+            <div class="sli-modal-top">
+                <h2>${title}</h2>
+            </div>
+            <div class="sli-modal-mid">
+                <i class="iconfont icon-${type}"></i>
+                <p>${content}</p>
+            </div>
+            <div class="sli-modal-bot">
+                <button sli-cancel class="sli-button sli-button-warn">${cancelText}</button>
+                <button sli-confirm class="sli-button sli-button-primary">${confirmText}</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+<script type="module">
+    import sli from "../slien.js"
+
+    sli()
+
+    $('button').on('click', () => {
+        $.modal({
+            type: 'success',
+            content: 'CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份'
+        }).then(res => {
+            console.log(res)
+        })
+    })
+</script>
+</body>
+</html>

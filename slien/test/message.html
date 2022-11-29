@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>message</title>
+    <link rel="stylesheet" href="../static/css/slien.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<button class="sli-button sli-button-primary">触发事件</button>
+<script type="module">
+    import sli from "../slien.js"
+
+    sli()
+    $('button').on('click', () => {
+        $.message({
+            content: 'CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份',
+            type: 'success',
+            duration: 1500
+        }).then(() => {
+            console.log('hello message')
+        }).catch(err => {
+            console.log(err)
+        })
+    })
+</script>
+</body>
+</html>

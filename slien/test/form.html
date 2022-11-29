@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/slien.css">
+</head>
+<body>
+<form id="sli-form" action="" class="sli-position-center">
+    <label>
+        <input name="account"
+               sli-icon="account"
+               placeholder="请输入您的账号"
+               type="text"
+               class="sli-input-inner">
+    </label>
+    <label>
+        <input name="password"
+               sli-icon="password"
+               sli-prefix
+               sli-clearable
+               type="password"
+               autocomplete="off"
+               placeholder="请输入您的密码"
+               class="sli-input-inner">
+    </label>
+    <label>
+        性别<br>
+        女<input type="radio" value="女" name="sex" checked>
+        男<input type="radio" value="男" name="sex">
+    </label>
+    <label>
+        爱好<br>
+        烫头<input type="checkbox" name="hobby" value="烫头">
+        扣女<input type="checkbox" name="hobby" value="扣女">
+    </label>
+    <label>
+        爱好<br>
+        烫头<input type="checkbox" name="poop" value="烫头">
+        扣女<input type="checkbox" name="poop" value="扣女">
+    </label>
+    <select id="stars" name="stars">
+        <option value="1">白羊座</option>
+        <option value="1">金牛座</option>
+        <option value="1">处女座</option>
+    </select>
+
+    <button type="submit" class="sli-button sli-button-primary">确认</button>
+</form>
+<script type="module">
+    import sli from "../slien.js"
+    // 初始化
+    sli()
+
+    $('#sli-form').on('submit', function (e) {
+        console.log($.form().collect(e))
+    })
+</script>
+</body>
+</html>

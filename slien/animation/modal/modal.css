@@ -1,0 +1,19 @@
+.modal-shrinking-out {
+    animation: modal-shrinking-out .56s ease-in-out forwards;
+}
+
+@keyframes modal-shrinking-out {
+    0% {
+        border-radius: 0;
+    }
+    22% {
+        transform: scale(1.1);
+    }
+    80% {
+        border-radius: 300px;
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+    }
+}

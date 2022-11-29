@@ -1,0 +1,172 @@
+/*主要内容*/
+main {
+    display: flex;
+    width: 100%;
+}
+
+main > div {
+    flex: 1;
+}
+
+.main-left-top {
+    position: relative;
+    width: 100%;
+    min-width: 650px;
+    height: 600px;
+}
+
+/*修改轮播图样式*/
+.main-left-top .sli-swiper {
+    /*激活状态颜色*/
+    --swiper-active-color: var(--color-gray-8);
+}
+
+.main-left-wrap {
+    padding-right: 15px;
+}
+
+/*右边*/
+.main-right-wrap {
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.goods-name {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-black-1);
+}
+
+.goods-desc {
+    border-bottom: 1px solid var(--color-gray-3);
+}
+
+.goods-sale {
+    padding: 10px 0;
+}
+
+.goods-sale span:first-of-type {
+    color: var(--color-orange-4);
+}
+
+.goods-sale span:last-of-type {
+    color: var(--color-font);
+}
+
+.goods-company, .goods-price {
+    color: var(--color-orange-4);
+    padding: 10px 0;
+}
+
+.goods-price {
+    font-size: 18px;
+}
+
+.choose-version,
+.choose-color {
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+.choose-version p,
+.choose-color p {
+    padding: 10px 0;
+    color: var(--color-black-1);
+    font-size: 18px;
+}
+
+.choose-version ul,
+.choose-color ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.choose-version li,
+.choose-color li {
+    display: block;
+    margin: 6px 15px 6px 0;
+    /*减去右边距*/
+    width: calc(50% - 15px);
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 5px;
+    color: var(--color-font);
+    font-weight: 525;
+    transition: .16s ease-in;
+}
+
+/*偶数*/
+.choose-version li:nth-of-type(2n),
+.choose-color li:nth-of-type(2n) {
+    margin-right: 0;
+    width: 50%;
+}
+
+.choose-version li:hover,
+.choose-color li:hover {
+    border: 1px dashed var(--color-orange-2);
+    color: var(--color-orange-4);
+    cursor: pointer;
+}
+
+/*激活*/
+.choose-version .choose-active,
+.choose-color .choose-active {
+    /*(!important) 防止被 hover 覆盖了*/
+    border: 1px solid var(--color-orange-2) !important;
+    color: var(--color-orange-4);
+}
+
+/*结算*/
+.buying-wrap {
+    position: relative;
+    margin: 50px 0;
+    background: var(--backdrop-1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.buying-wrap > p span {
+    color: var(--color-font);
+    font-size: 16px;
+}
+
+.add-art-wrap {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-art-wrap > p span {
+    color: var(--color-orange-4);
+    font-size: 26px;
+}
+
+/*购物信息*/
+.buy-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+.buy-info {
+    height: 100%;
+    line-height: 30px;
+}
+
+.buy-num {
+    color: var(--color-black-1);
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+.buy-num::before {
+    content: "×";
+    font-size: 20px;
+}

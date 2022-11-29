@@ -1,0 +1,30 @@
+.lens-overlay {
+    cursor: move;
+    display: none;
+    position: absolute;
+    /*上升*/
+    z-index: 1;
+    background-image: url("https://gtms01.alicdn.com/tps/i4/T12pdtXaldXXXXXXXX-2-2.png");
+    height: 250px;
+    width: 250px;
+    top: 0;
+    left: 0;
+}
+
+.lens-view {
+    display: none;
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% - 50px);
+    top: 0;
+    left: 100%;
+    z-index: 9;
+    background: var(--color-white-1);
+    overflow: hidden;
+}
+
+.lens-view img{
+    position: absolute;
+    width: 200%;
+    height: 200%;
+}

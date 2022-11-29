@@ -1,0 +1,56 @@
+/*引入字体样式*/
+@import url("../iconfont/iconfont.css");
+/*引入颜色*/
+@import url("color.css");
+/*引入动画*/
+@import url("../../animation/animation.css");
+/*消息提示框样式*/
+@import url("../../components/message/message.css");
+/*模态提示框样式*/
+@import url("../../components/modal/modal.css");
+/*轮播图*/
+@import url("../../components/swiper/swiper.css");
+/*表单*/
+@import url("../../components/form/form.css");
+/*num-box*/
+@import url("../../components/numBox/numBox.css");
+/*侧边栏*/
+@import url("../../components/asideBar/asideBar.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*定位居中(父元素 => relative)*/
+.sli-position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*flex居中*/
+.sli-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sli-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*初始化取消 transition*/
+.none-transition * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}

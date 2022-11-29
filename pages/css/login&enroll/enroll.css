@@ -1,0 +1,11 @@
+.enroll-wrap .form-content {
+    padding: 4px 0;
+}
+
+.enroll-wrap .form-content > span {
+    color: var(--color-white-4);
+}
+
+.enroll-wrap .form-content > label {
+    height: 45px;
+}

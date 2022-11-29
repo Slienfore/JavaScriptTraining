@@ -1,0 +1,50 @@
+.sli-button {
+    --color-button-normal: var(--color-white-1);
+    --color-button-normal-hover: var(--color-gray-1);
+
+    --color-button-primary: var(--color-orange-1);
+    --color-button-primary-hover: var(--color-orange-2);
+
+    /*    --color-button-primary: var(--color-green-3);
+        --color-button-primary-hover: var(--color-green-4);*/
+
+    --color-button-warn: var(--color-red-2);
+    --color-button-warn-hover: var(--color-red-3);
+}
+
+.sli-button {
+    cursor: pointer;
+    background: var(--color-button-normal);
+    border: none;
+    text-align: center;
+    outline: none;
+    border-radius: 18px;
+    padding: 10px 20px;
+    min-width: 70px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    transition: .3s ease-in-out;
+}
+
+.sli-button-primary {
+    color: var(--color-white-4);
+    background: var(--color-button-primary);
+}
+
+.sli-button-warn {
+    color: #fff;
+    background: var(--color-button-warn);
+}
+
+.sli-button:hover {
+    background: var(--color-button-normal-hover);
+}
+
+.sli-button-primary:hover {
+    background: var(--color-button-primary-hover);
+}
+
+.sli-button-warn:hover {
+    background: var(--color-button-warn-hover);
+}

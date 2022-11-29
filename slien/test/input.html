@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/slien.css">
+</head>
+<body>
+<label><input name="password"
+              sli-icon="password"
+              sli-prefix
+              sli-clearable
+              type="password"
+              placeholder="请输入您的密码"
+              class="sli-input-inner">
+</label>
+<label><input name="account"
+              sli-icon="account"
+              sli-clearable
+              placeholder="请输入您的账号"
+              type="text"
+              class="sli-input-inner"></label>
+
+<script type="module">
+    import sli from "../slien.js"
+    // 初始化
+    sli()
+
+</script>
+</body>
+</html>
+<style>
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

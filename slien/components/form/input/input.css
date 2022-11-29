@@ -1,0 +1,111 @@
+.sli-input {
+    --color-input-backdrop: var(--color-white-5);
+    --color-input-font: var(--color-font);
+    --color-input-border: var(--color-gray-3);
+    --color-input-border-focus: var(--color-blue-3);
+    --color-input-icon: var(--color-blue-3);
+}
+
+.sli-input {
+    position: relative;
+}
+
+.sli-input-inner {
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: inherit;
+    outline: none;
+    height: inherit;
+    width: inherit;
+    padding: 0 15px;
+    border-radius: 6px;
+    border: 2px solid var(--color-input-border);
+    color: var(--color-input-font);
+    background: var(--color-input-backdrop);
+}
+
+.sli-input-hover {
+    cursor: text;
+    border-color: var(--color-input-border-focus);
+}
+
+.sli-input-transition {
+    transition: .38s border-color cubic-bezier(.645, .045, .355, 1);
+}
+
+/*前缀图标*/
+.sli-input-prefix input {
+    padding-left: 40px;
+    padding-right: 25px;
+}
+
+/*后缀间距*/
+.sli-input-suffix input {
+    padding-right: 25px;
+}
+
+/*输入框图标*/
+.sli-input-icon {
+    position: absolute;
+    color: var(--color-input-icon);
+}
+
+.sli-input-icon {
+    font-size: 1.3rem;
+    top: 50%;
+}
+
+/*前缀图标*/
+.sli-input-icon-prefix {
+    left: 0;
+    transform: translate(40%, -50%);
+}
+
+/*后缀图标*/
+.sli-input-icon-suffix {
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+/*清除按钮*/
+.sli-input-clear {
+    cursor: pointer;
+    z-index: 99;
+    /*默认隐藏*/
+    display: none;
+    font-size: 1rem;
+    transition: .35s all ease-in-out;
+    opacity: .5;
+}
+
+.sli-input-clear:hover {
+    opacity: 1;
+}
+
+/*placeholder样式*/
+.sli-input input::-webkit-input-placeholder {
+    /* WebKit browsers，webkit内核浏览器 */
+    color: var(--color-input-font);
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: .6;
+}
+
+.sli-input input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: var(--color-input-font);
+}
+
+.sli-input input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: var(--color-input-font);
+}
+
+.sli-input input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: var(--color-input-font);
+}
+
+/*密码框小眼睛*/
+input[type="password"]::-ms-reveal {
+}

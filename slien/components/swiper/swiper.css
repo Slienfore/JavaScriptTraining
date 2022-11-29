@@ -1,0 +1,121 @@
+.sli-swiper {
+    /*小圆点颜色*/
+    --swiper-dot-color: rgba(60, 60, 67, 0.3);
+    /*箭头颜色*/
+    --swiper-arrow-color: rgba(0, 0, 0, .25);
+    /*激活状态颜色*/
+    --swiper-active-color: rgba(255, 255, 255, .8);
+}
+
+.sli-swiper {
+    /*JS 将会自动索引 临近(一层)的父元素的高度*/
+    /*轮播图大小*/
+    --swiper-width: 0;
+    /*轮播图高度*/
+    --swiper-height: 0;
+    /*圆角大小*/
+    --swiper-border-radius: 18px;
+    /*小圆点高度*/
+    --swiper-dot-wrap-heihgt: 20px;
+    /*小圆点大小*/
+    --swiper-dot-size: 15px;
+}
+
+.sli-swiper {
+    position: relative;
+    width: var(--swiper-width);
+    height: var(--swiper-height);
+    border-radius: var(--swiper-border-radius);
+    overflow: hidden;
+}
+
+.sli-arrow-l,
+.sli-arrow-r {
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: var(--swiper-arrow-color);
+    font-size: 50px;
+}
+
+.sli-arrow-l {
+    left: 1%;
+}
+
+.sli-arrow-r {
+    right: 1%;
+}
+
+.sli-swiper-focus {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.sli-swiper-focus li a {
+    display: block;
+    width: var(--swiper-width);
+    height: var(--swiper-height);
+}
+
+.sli-swiper-focus img {
+    width: var(--swiper-width);
+    height: var(--swiper-height);
+    border-radius: var(--swiper-border-radius);
+}
+
+.sli-swiper-dot-wrap {
+    position: absolute;
+    height: var(--swiper-dot-wrap-heihgt);
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.sli-swiper-dot-wrap li {
+    cursor: pointer;
+    /*未激活会变小*/
+    width: calc(var(--swiper-dot-size) * .7);
+    height: calc(var(--swiper-dot-size) * .7);
+    background: var(--swiper-dot-color);
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+/*自动播放当前圆点样式*/
+.sli-swiper-dot-wrap .dot-on {
+    width: var(--swiper-dot-size);
+    height: var(--swiper-dot-size);
+    background: var(--swiper-active-color);
+}
+
+.sli-swiper-focus li,
+.sli-swiper-dot-wrap, .sli-swiper-dot-wrap li,
+.sli-arrow-l, .sli-arrow-r {
+    transition: .4s all ease;
+}
+
+.sli-swiper:hover .sli-swiper-dot-wrap {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.sli-swiper:hover .sli-arrow-l {
+    transform: scale(1.2);
+}
+
+.sli-swiper:hover .sli-arrow-r {
+    transform: scale(1.2);
+}
+
+.sli-arrow-l:hover {
+    color: var(--swiper-active-color);
+}
+
+.sli-arrow-r:hover {
+    color: var(--swiper-active-color);
+}

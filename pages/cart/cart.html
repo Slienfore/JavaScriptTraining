@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../../static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/cart/cart.css">
+</head>
+<body>
+<div class="none-transition container">
+    <header>
+        <!--logo-->
+        <div class="header-left sli-flex-center">
+            <a class="logo" href="../../index.html" title="首页">
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png" alt=""></a>
+            <h3>我的购物车</h3>
+        </div>
+        <!--用户信息-->
+        <div class="header-right">
+            <a href="javascript:;" class="user-info">
+                <!--用户信息-->
+                <img class="user-avatar"
+                     src="https://wwc.alicdn.com/avatar/getAvatar.do?userNick=&amp;width=72&amp;height=72&amp;"
+                     alt="">
+                <!--用户姓名-->
+                <span class="user-name"></span></a>
+            <h4>Welcome&nbsp;^_^</h4>
+        </div>
+    </header>
+    <main class="wrapping">
+        <div class="main-top col-wrap">
+            <div class="col-check">
+                <label class="check-label">
+                    <input type="checkbox" class="all-in">
+                    <span>全选</span></label>
+            </div>
+            <div class="col-img">&nbsp;</div>
+            <div class="col-name">商品名称</div>
+            <div class="col-price">单价</div>
+            <div class="col-num">数量</div>
+            <div class="col-total-price">小计</div>
+            <div class="col-opt">操作</div>
+        </div>
+        <!--分割线-->
+        <div class="divide"></div>
+
+        <!--商品列表-->
+        <div class="goods-list"></div>
+        <!--分割线-->
+        <div class="divide"></div>
+        <!--float-bar-->
+        <div class="float-bar float-bar-fixed">
+            <!--左边-->
+            <div class="bar-left">
+                <div class="col-check">
+                    <label class="check-label">
+                        <input type="checkbox" class="all-in">
+                        <span>全选</span></label>
+                </div>
+            </div>
+            <!--右边-->
+            <div class="bar-right">
+                <div class="choose-num">
+                    <span>已选商品</span>
+                    <span class="high-light">0</span>
+                    <span>件</span>
+                </div>
+                <div class="total-price">
+                    <span>合计（不含运费）</span>
+                    <span class="high-light">0.00</span>
+                </div>
+                <button class="pay-btn sli-button sli-button-primary">结算</button>
+            </div>
+        </div>
+    </main>
+
+    <!--侧边栏-->
+    <aside class="sli-aside-bar">
+        <ul class="sli-aside-inner">
+            <li><a href="../../index.html">
+                <i class="iconfont icon-home"></i>
+                <span>首页</span>
+            </a></li>
+            <li><a href="javascript:;">
+                <i class="iconfont icon-service"></i>
+                <span>客服</span>
+            </a></li>
+            <li><a href="javascript:;">
+                <i class="iconfont icon-feedback"></i>
+                <span>反馈</span>
+            </a></li>
+        </ul>
+    </aside>
+</div>
+
+<script type="module" src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@import url("../../../slien/static/css/slien.css");
+@import url("header.css");
+@import url("main.css");
+
+.container {
+    --backdrop-1: var(--color-white-4);
+    --backdrop-2: var(--color-white-5);
+    --backdrop-3: var(--color-gray-7);
+    --min-width: 1400px;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100vw;
+    min-width: var(--min-width);
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--backdrop-1);
+}
+
+.wrapping {
+    width: 100%;
+    min-width: 100%;
+    background: var(--backdrop-2);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 5px 1px var(--color-gray-1);
+}

@@ -1,0 +1,35 @@
+.sli-aside-bar {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    transform: translateY(-50%);
+    padding: 20px 0;
+    box-shadow: -1px 0 28px 2px var(--color-gray-3);
+    background: var(--color-white-5);
+    border-radius: 18px 0 0 18px;
+}
+
+.sli-aside-inner {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sli-aside-inner a {
+    position: relative;
+    color: var(--color-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: .8;
+    margin: 10px 0;
+}
+
+.sli-aside-inner a i {
+    font-weight: 580;
+    font-size: 1.4rem;
+    padding-bottom: 5px;
+}

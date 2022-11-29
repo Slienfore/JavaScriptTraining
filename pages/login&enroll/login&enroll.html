@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录与注册</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../../static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login&enroll/login&enroll.css">
+</head>
+<body>
+<div class="none-transition container sli-flex-center">
+    <div class="wrapping sli-flex-center">
+        <!--激活滑块-->
+        <header>
+            <div class="wrapping-header">
+                <span class="slide-block-el-active">登录</span><span>注册</span>
+                <!--激活滑块-->
+                <div class="slide-block"></div>
+            </div>
+        </header>
+
+        <!--登录框-->
+        <div class="login-wrap">
+            <form>
+                <div class="form-content"><!--账号-->
+                    <span>账号</span>
+                    <label><input name="account" type="text" class="sli-input-inner" placeholder="请输入您的账号"
+                                  sli-icon="account" sli-clearable></label>
+                </div>
+                <div class="form-content"><!--密码-->
+                    <span>密码</span>
+                    <label><input name="password" type="password" class="sli-input-inner" placeholder="请输入密码"
+                                  autocomplete="off"
+                                  sli-icon="password" sli-clearable></label>
+                </div>
+                <div class="memo-forget-wrap"><!--记住我&忘记密码-->
+                    <label>
+                        <input type="checkbox" name="memo">
+                        <span>记住我</span>
+                    </label>
+                    <a href="javascript:;">忘记密码</a>
+                </div>
+                <div class="button-wrap">
+                    <button class="sli-button sli-button-primary">登录</button>
+                </div>
+            </form>
+        </div>
+
+        <!--注册框-->
+        <div class="enroll-wrap">
+            <form>
+                <div class="form-content"><!--账号-->
+                    <span>账号</span>
+                    <label><input name="account" type="text" class="sli-input-inner" placeholder="请输入尚未注册的手机号"
+                                  sli-icon="account" sli-clearable></label>
+                </div>
+                <div class="form-content"><!--用户名-->
+                    <span>用户名</span>
+                    <label><input name="username" type="text" class="sli-input-inner" placeholder="请输入用户名"
+                                  autocomplete="off"
+                                  sli-icon="username" sli-clearable></label>
+                </div>
+                <div class="form-content"><!--第一次密码-->
+                    <span>密码</span>
+                    <label><input name="prePassword" type="password" class="sli-input-inner" placeholder="请输入密码"
+                                  autocomplete="off"
+                                  sli-icon="password" sli-clearable></label>
+                </div>
+                <div class="form-content"><!--第二次密码-->
+                    <span>再次输密</span>
+                    <label><input name="sufPassword" type="password" class="sli-input-inner" placeholder="请再次输入密码"
+                                  autocomplete="off"
+                                  sli-icon="password" sli-clearable></label>
+                </div>
+                <div class="button-wrap">
+                    <button class="sli-button sli-button-primary">注册</button>
+                </div>
+            </form>
+        </div>
+        <!--其他框-->
+        <div class="other-wrap"></div>
+    </div>
+</div>
+<script type="module" src="login&enroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slienfore 主页</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="pages/css/index/index.css">
+</head>
+<body class="iconfont">
+<div class="none-transition container">
+    <!--导航栏-->
+    <header>
+        <div class="header-inner">
+            <!--logo-->
+            <div class="header-left-wrap">
+                <a href="javascript:;">
+                    <img src="https://gw.alicdn.com/imgextra/i3/O1CN01uRz3de23mzWofmPYX_!!6000000007299-2-tps-143-59.png"
+                         alt="logo"></a>
+            </div>
+            <!--搜索框-->
+            <div class="header-mid-wrap">
+                <div class="search-input-wrap">
+                    <label><input name="query" type="text" class="search-input sli-input-inner "
+                                  placeholder="请输入您想要搜索内容..."
+                                  sli-icon="search" sli-clearable></label>
+                    <button class="search-btn sli-button sli-button-primary">搜索</button>
+                </div>
+                <!--搜素内容-->
+                <div class="search-wrap">
+                    <!--搜索建议-->
+                    <ul class="search-suggest"></ul>
+                </div>
+            </div>
+            <!--二维码-->
+            <div class="header-right-wrap">
+                <a href="javascript:;">
+                    <img src="https://gw.alicdn.com/imgextra/i4/O1CN01GZ8Gm51DHyo7asI5m_!!6000000000192-2-tps-160-160.png"
+                         alt="QR">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--主区域-->
+    <main class="wrapping">
+        <div class="main-wrap"><!--顶部区域-->
+            <div class="main-left">
+                <h2>分类</h2>
+                <!--分类-->
+                <ul class="main-category-wrap"></ul>
+            </div>
+            <div class="main-right">
+                <div class="main-nav">
+                    <ul></ul><!--顶部导航栏-->
+                </div>
+                <!--内容区-->
+                <div class="main-content">
+                    <!--左侧轮播图-->
+                    <div class="main-content-left">
+                        <div id="sli-swiper" sli-radius="14px"></div><!--轮播图-->
+                    </div>
+                    <!--右侧个人信息-->
+                    <div class="main-content-right">
+                        <div class="userinfo-wrap">
+                            <!--个人头像-->
+                            <div class="top-wrap">
+                                <div class="avatar-wrap sli-flex-center">
+                                    <img src="https://wwc.alicdn.com/avatar/getAvatar.do?userNick=&amp;width=72&amp;height=72&amp;"
+                                         alt="">
+                                    <div class="logout">
+                                        <span>退出登录</span>
+                                    </div>
+                                </div>
+                                <div class="username-wrap sli-flex-center">
+                                    <span>Hi!&nbsp;</span><span>您好</span>
+                                </div>
+                            </div>
+                            <!--未登录-->
+                            <div class="mid-wrap mid-wrap-unLogin">
+                                <div>
+                                    <button class="sli-button sli-button-primary">登录</button>
+                                    <button class="sli-button sli-button-primary">注册</button>
+                                </div>
+                            </div>
+                            <!--登录-->
+                            <div class="mid-wrap mid-wrap-hasLogin">
+                                <ul>
+                                    <li><a class="cart-num" href="pages/cart/cart.html">
+                                        <span class="">99+</span><span>购物车</span></a></li>
+                                    <li><a href="javascript:;">
+                                        <span>99+</span><span>订单</span></a></li>
+                                    <li><a href="javascript:;">
+                                        <span>99+</span><span>代发货</span></a></li>
+                                    <li><a href="javascript:;">
+                                        <span>99+</span><span>待付款</span></a></li>
+                                    <li><a href="javascript:;">
+                                        <span>99+</span><span>待评价</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--滚动文字-->
+                        <div class="scroll-tip-wrap">
+                            <div class="notice-wrap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--限时秒杀-->
+    <div class="sec-kill-wrap wrapping">
+        <div class="sec-kill-left">
+            <a href="javascript:;" class="sec-kill-info">
+                <h1>京西秒杀</h1>
+                <div class="sec-kill-count"><!--倒计时-->
+                    <div class="sec-kill-desc-wrap"><strong>00:00</strong><span>&nbsp;点场&nbsp;&nbsp;距结束</span></div>
+                    <div class="sec-kill-unit-wrap">
+                        <span class="sec-kill-hh sec-kill-unit">00</span><!--时-->
+                        <span class="sec-kill-mm sec-kill-unit">00</span><!--分-->
+                        <span class="sec-kill-ss sec-kill-unit">00</span><!--秒-->
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="sec-kill-right">
+            <ul class="sec-kill-goods-list"></ul><!--秒杀商品列表-->
+        </div>
+    </div>
+
+    <!--侧边栏-->
+    <aside class="sli-aside-bar">
+        <ul class="sli-aside-inner">
+            <li><a href="pages/cart/cart.html">
+                <i class="iconfont icon-cart"></i>
+                <span>购物车</span>
+            </a></li>
+            <li><a href="javascript:;">
+                <i class="iconfont icon-feedback"></i>
+                <span>反馈</span>
+            </a></li>
+            <li><a href="javascript:;">
+                <i class="iconfont icon-service"></i>
+                <span>客服</span>
+            </a></li>
+        </ul>
+    </aside>
+</div>
+
+<script type="module" src="pages/index/index.js"></script>
+</body>
+</html>

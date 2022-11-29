@@ -1,0 +1,98 @@
+/*动画(animation 不会保存属性, 故 0% 应该设置初始值)*/
+.rotateEnter-FromRight {
+    animation: rotateEnter-FromRight 1.1s ease-in-out forwards;
+}
+
+@keyframes rotateEnter-FromRight {
+    0% {
+        z-index: var(--z-index-minor);
+        transform: rotate(6.5deg);
+    }
+
+    42% {
+        transform: rotate(0deg);
+    }
+
+    55% {
+        opacity: .8;
+    }
+
+    66% {
+        transform: scale(.97);
+    }
+
+    100% {
+        z-index: var(--z-index-primary);
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.rotateOut-to-right {
+    /*保证转动时间相同*/
+    animation: rotateOut-to-right .462s ease-in-out forwards;
+}
+
+@keyframes rotateOut-to-right {
+    0% {
+        z-index: var(--z-index-primary);
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        z-index: var(--z-index-minor);
+        opacity: 1;
+        transform: rotate(6.5deg);
+    }
+}
+
+.rotateEnter-FromLeft {
+    animation: rotateEnter-FromLeft 1.1s ease-out forwards;
+}
+
+@keyframes rotateEnter-FromLeft {
+    0% {
+        z-index: var(--z-index-minor);
+        transform: rotate(-6.5deg);
+    }
+
+    42% {
+        transform: rotate(0deg);
+    }
+
+    55% {
+        opacity: .8;
+    }
+
+    66% {
+        transform: scale(.97);
+    }
+
+    100% {
+        z-index: var(--z-index-primary);
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.rotateOut-to-left {
+    /*保证转动时间相同 (0.78 * 42%)*/
+    animation: rotateOut-to-left .462s ease-out forwards;
+}
+
+@keyframes rotateOut-to-left {
+    0% {
+        z-index: var(--z-index-primary);
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        z-index: var(--z-index-minor);
+        opacity: 1;
+        transform: rotate(-6.5deg);
+    }
+}

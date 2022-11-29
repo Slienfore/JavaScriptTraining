@@ -1,0 +1,101 @@
+.sli-modal {
+    --color-overlay-backdrop: rgba(0, 0, 0, .1);
+    /*--color-modal-backdrop: var(--color-blue-2);*/
+    --color-modal-backdrop: var(--color-white-1);
+}
+
+.sli-modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/*遮罩层*/
+.sli-modal-overlay {
+    position: absolute;
+    background: var(--color-overlay-backdrop);
+    background-blend-mode: saturation;
+    border-radius: 30px;
+}
+
+.sli-modal-wrap {
+    z-index: 9999;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 525px;
+    min-height: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px var(--color-white-2);
+    background: var(--color-modal-backdrop);
+}
+
+.sli-modal-wrap .iconfont {
+    font-size: 1.4rem;
+}
+
+.sli-modal-wrap .close-tag {
+    position: absolute;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-gray-2);
+    opacity: .8;
+    transition: .35s ease-in-out;
+    transform-origin: center center;
+}
+
+.sli-modal-wrap .close-tag:hover {
+    opacity: 1;
+    color: var(--color-red-2);
+    /*旋转、放大*/
+    transform: scale(1.3) rotate(180deg);
+}
+
+.sli-modal-wrap > div {
+    margin: 10px 0;
+    width: 100%;
+}
+
+/*顶部*/
+.sli-modal-top h2 {
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.sli-modal-wrap div:nth-of-type(n + 2) {
+    display: flex;
+}
+
+/*中部*/
+.sli-modal-mid {
+    position: relative;
+    padding: 20px;
+}
+
+/*文字围绕*/
+.sli-modal-mid .iconfont {
+    position: absolute;
+}
+
+.sli-modal-mid p {
+    text-indent: 2.5rem;
+    text-align: left;
+}
+
+/*底部*/
+.sli-modal-bot {
+    justify-content: right;
+}
+
+.sli-modal-bot button:first-child {
+    margin: 0 13px;
+}

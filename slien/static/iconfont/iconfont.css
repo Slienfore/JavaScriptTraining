@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 3666664 */
+    src: url('//at.alicdn.com/t/c/font_3666664_h27nlojm3si.woff2?t=1669684863003') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3666664_h27nlojm3si.woff?t=1669684863003') format('woff'),
+    url('//at.alicdn.com/t/c/font_3666664_h27nlojm3si.ttf?t=1669684863003') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+    content: "\e673";
+}
+
+.icon-service:before {
+    content: "\e63c";
+}
+
+.icon-feedback:before {
+    content: "\e69b";
+}
+
+.icon-cart:before {
+    content: "\e61f";
+}
+
+.icon-location:before {
+    content: "\e6ad";
+}
+
+.icon-laptop:before {
+    content: "\e649";
+}
+
+.icon-life:before {
+    content: "\e66c";
+}
+
+.icon-appliance:before {
+    content: "\e608";
+}
+
+.icon-intelligence:before {
+    content: "\e62f";
+}
+
+.icon-phone:before {
+    content: "\e64f";
+}
+
+.icon-television:before {
+    content: "\e65f";
+}
+
+.icon-earphone:before {
+    content: "\e622";
+}
+
+.icon-search:before {
+    content: "\e678";
+}
+
+.icon-username:before {
+    content: "\e61b";
+}
+
+.icon-password:before {
+    content: "\e627";
+}
+
+.icon-account:before {
+    content: "\e62e";
+}
+
+.icon-info:before {
+    content: "\e651";
+}
+
+.icon-warn:before {
+    content: "\e676";
+}
+
+.icon-success:before {
+    content: "\e675";
+}
+
+.icon-arrow_left:before {
+    content: "\e62c";
+}
+
+.icon-arrow_right:before {
+    content: "\e62d";
+}
+
+/*icon颜色*/
+.icon-success {
+    color: var(--color-green-2) !important;
+}
+
+.icon-info {
+    color: var(--color-gray-2);
+}
+
+.icon-warn {
+    color: var(--color-red-2);
+}

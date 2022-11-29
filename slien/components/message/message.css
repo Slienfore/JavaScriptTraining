@@ -1,0 +1,44 @@
+/*增加覆盖权重*/
+body .sli-msg-wrap {
+    z-index: 999;
+    top: 5%;
+}
+
+.sli-msg-wrap {
+    height: 50px;
+    /*随内容撑开*/
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.sli-msg-wrap .msg-icon {
+    font-size: 1.2rem;
+}
+
+.sli-msg-wrap .msg-text {
+    padding-left: 15px;
+    letter-spacing: 1px;
+    font-weight: 525;
+}
+
+/*成功*/
+.msg-success {
+    background: var(--color-green-1);
+    color: var(--color-green-2);
+}
+
+/*提醒*/
+.msg-info {
+    background: var(--color-gray-1);
+    color: var(--color-gray-2);
+}
+
+/*失败*/
+.msg-warn {
+    background: var(--color-red-1);
+    color: var(--color-red-2);
+}

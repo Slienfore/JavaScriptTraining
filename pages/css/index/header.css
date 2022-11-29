@@ -1,0 +1,199 @@
+/*头部区域*/
+header {
+    width: 100%;
+    max-height: 180px;
+    min-height: 180px;
+    min-width: var(--min-width);
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-inner > div {
+    display: flex;
+    align-items: center;
+}
+
+.header-left-wrap,
+.header-right-wrap {
+    flex: 1;
+}
+
+/*中间*/
+.header-mid-wrap {
+    position: relative;
+    height: 45%;
+    flex: 4;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrap {
+    width: 100%;
+    min-width: 350px;
+    height: 50px;
+}
+
+.search-input-wrap > label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 26;
+}
+
+/*修改hover样式*/
+.search-input-wrap .sli-input-hover {
+    cursor: text;
+    border-color: var(--color-orange-2) !important;
+}
+
+.search-input-wrap .sli-input-suffix input {
+    padding-right: 120px;
+}
+
+/*前缀图标*/
+.search-input-wrap .sli-input-icon-prefix {
+    transform: translate(60%, -50%);
+    color: var(--color-orange-2);
+}
+
+.search-input-wrap .sli-input-clear {
+    right: 90px;
+}
+
+.search-input {
+    font-weight: 700;
+    border-radius: 70px;
+    border-color: var(--color-orange-1);
+}
+
+.search-btn {
+    z-index: 26;
+    position: absolute;
+    width: 80px;
+    right: 0;
+    top: 50%;
+    transform: translate(-16%, -50%);
+    font-family: SimHei, monospace;
+    font-weight: 660;
+    letter-spacing: 3px;
+}
+
+/*左边*/
+.header-left-wrap {
+    min-width: 245px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left-wrap a {
+    display: block;
+}
+
+.header-left-wrap img {
+    width: 140px;
+    height: 60px;
+}
+
+/*右边*/
+.header-right-wrap {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right-wrap > a {
+    position: relative;
+    display: block;
+    background: var(--backdrop-2);
+    padding: 30px 15px 5px;
+    border-radius: 8px;
+    transform-origin: center center;
+    box-shadow: 0 0 6px var(--color-gray-3);
+    animation: animateQR 2.5s linear infinite;
+}
+
+/*上下漂浮*/
+@keyframes animateQR {
+    25% {
+        transform: translateY(5%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-right-wrap > a::before {
+    content: '下载淘宝';
+    position: absolute;
+    top: 0;
+    transform: translateY(25%);
+    color: var(--color-orange-2);
+}
+
+.header-right-wrap > a > img {
+    width: 62px;
+    height: 62px;
+}
+
+/*搜索内容*/
+.search-wrap {
+    display: none;
+    z-index: 25;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: var(--color-white-5);
+    padding: 60px 40px 15px 33px;
+    border-radius: 27px 27px 20px 20px;
+    box-shadow: 0 0 6px 2px var(--color-gray-1);
+}
+
+.suggest-item {
+    width: 100%;
+}
+
+.suggest-item a {
+    display: block;
+    border-radius: 10px;
+    padding: 2px 5px;
+    margin: 8px 0;
+    line-height: 23px;
+    width: 100%;
+    color: var(--color-font);
+    font-size: 16px;
+    transition: background-color .06s ease-out;
+    letter-spacing: .8px;
+}
+
+.suggest-item a:hover {
+    background: var(--color-gray-3);
+}
+
+.suggest-item .high-light {
+    color: var(--color-red-2);
+}
+
+.suggest-item .sale-desc {
+    font-size: 12px;
+}
+
+.sale-desc:first-of-type {
+    color: #2ee488;
+}

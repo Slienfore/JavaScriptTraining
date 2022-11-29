@@ -1,0 +1,84 @@
+/*浮动广告*/
+.float-ad {
+    position: absolute;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 9px;
+    width: 220px;
+    height: 200px;
+    background: var(--color-green-5);
+    opacity: 0;
+    top: -500%;
+    left: -500%;
+    z-index: 88;
+    transition: opacity .35s linear;
+}
+
+.float-ad:hover {
+    opacity: 1 !important;
+}
+
+.float-ad-item {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: var(--color-font);
+}
+
+.float-ad-item > img {
+    display: block;
+    width: 150px;
+    height: 120px;
+    margin: auto;
+    transition: transform .35s ease;
+    transform-origin: center;
+}
+
+.float-ad-item:hover img {
+    transform: scale(1.1);
+}
+
+.float-ad .ad-desc {
+    text-align: center;
+}
+
+.float-ad .ad-desc > span {
+    font-weight: 700;
+}
+
+.float-ad .ad-desc > span:first-of-type {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.float-ad .ad-desc > span:last-of-type {
+    color: var(--color-white-4);
+    background: var(--color-yellow-1);
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 0;
+    padding: 3px 6px 3px 12px;
+    border-radius: 20px;
+}
+
+/*小箭头*/
+.float-ad .ad-desc > span:last-of-type::after {
+    content: "\e62d";
+}
+
+.float-ad .close-tag {
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    right: 8px;
+    top: 8px;
+    opacity: .8;
+    font-size: 1.1rem;
+    transition: transform .35s ease-in-out;
+    transform-origin: center;
+}
+
+.float-ad .close-tag:hover {
+    opacity: 1;
+    transform: rotate(180deg) scale(1.3);
+}

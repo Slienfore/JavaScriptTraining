@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品信息</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../../static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/shopping/shopping.css">
+</head>
+<body>
+<div class="none-transition container">
+    <!--页头商品信息-->
+    <header>
+        <div class="header-left-wrap">
+            <a class="logo sli-flex-center" href="../../index.html" title="首页">
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png" alt="">
+            </a>
+            <!--商品名称-->
+            <h3></h3>
+            <!--版本信息-->
+            <ul class="version-wrap"></ul>
+        </div>
+        <div class="header-right-wrap">
+            <ul>
+                <li><a href="../cart/cart.html" target="_blank">购物车</a></li>
+                <li><a href="javascript:;">参数页</a></li>
+                <li><a href="javascript:;">咨询客服</a></li>
+                <li><a href="javascript:;">用户评价</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!--左侧-->
+        <div class="main-left-wrap">
+            <div class="main-left-top">
+                <!--轮播图-->
+                <div id="sli-swiper" sli-radius="0px">
+                    <!--棱镜(必须写到这里面, 否则将会触发轮播图悬停效果)-->
+                    <span class="lens-overlay"></span>
+                </div>
+
+                <!--棱镜预览-->
+                <div class="lens-view">
+                    <img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1663832685.29741988.jpg"
+                         alt="">
+                </div>
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="main-right-wrap">
+            <h2 class="goods-name"></h2>
+            <div class="goods-desc">
+                <p class="goods-sale">
+                    <!--优惠信息-->
+                    <span></span>
+                    <!--商品描述-->
+                    <span></span>
+                </p>
+                <p class="goods-company">小米自营</p>
+                <!--商品价格-->
+                <p class="price goods-price"></p>
+            </div>
+            <!--版本选择-->
+            <div class="choose-version">
+                <p>选择版本</p>
+                <ul></ul>
+            </div>
+            <!--颜色选择-->
+            <div class="choose-color">
+                <p>选择颜色</p>
+                <ul></ul>
+            </div>
+            <div class="buying-wrap">
+                <div class="buy-info-wrap">
+                    <div class="buy-info">
+                        <span class="buy-goods-name"></span>
+                        <span class="buy-goods-version"></span>
+                        <span class="buy-goods-color"></span>
+                        <span class="buy-num">1</span>
+                    </div>
+                    <!--numBox-->
+                    <div class="sli-num-box" sli-max-num="99">
+                        <button class="sli-num-box-sub">-</button>
+                        <input class="sli-num-box-input" type="text" value="1">
+                        <button class="sli-num-box-add">+</button>
+                    </div>
+                </div>
+                <div class="add-art-wrap">
+                    <p>
+                        <span>总计:&nbsp;</span>
+                        <!--总金额-->
+                        <span class="price buy-goods-price"></span>
+                    </p>
+                    <button class="add-cart-btn sli-button sli-button-primary">加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--侧边栏-->
+    <aside class="sli-aside-bar">
+        <ul class="sli-aside-inner">
+            <li><a href="../cart/cart.html" target="_blank">
+                <i class="iconfont icon-cart"></i>
+                <span>购物车</span>
+            </a></li>
+            <li><a href="../../index.html">
+                <i class="iconfont icon-home"></i>
+                <span>首页</span>
+            </a></li>
+            <li><a href="javascript:;">
+                <i class="iconfont icon-feedback"></i>
+                <span>反馈</span>
+            </a></li>
+            <li><a href="javascript:;">
+                <i class="iconfont icon-service"></i>
+                <span>客服</span>
+            </a></li>
+        </ul>
+    </aside>
+</div>
+
+<script type="module" src="shopping.js"></script>
+</body>
+</html>
